@@ -30,8 +30,6 @@ class SourceTextProvider: TextProviding {
             throw TextLoaderError.FileLoadingFailure
         }
         let fileData = try Data(contentsOf: fileURL)
-        let decodedString = String(data: fileData, encoding: encoding)
-        let replacingQuites = decodedString?.replacingOccurrences(of: "’", with: "&apos;")
-        return replacingQuites
+        return String(data: fileData, encoding: encoding)
     }
 }

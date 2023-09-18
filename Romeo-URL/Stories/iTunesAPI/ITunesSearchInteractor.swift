@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 protocol ITunesSearchInteractorInput: AnyObject {
     func viewDidLoad()
@@ -43,7 +44,7 @@ final class ITunesSearchInteractor {
                     self?.presenter?.show(albums: albums)
                 }
             } catch (let error) {
-                print("Error loading albums: \(error.localizedDescription)")
+                Logger.iTunesStoryNamespace.info("Error loading albums: \(error.localizedDescription)")
             }
         }
     }
