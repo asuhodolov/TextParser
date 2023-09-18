@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00130DEA2AB875E500EB38DA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DE92AB875E500EB38DA /* String+Extensions.swift */; };
+		00130DEC2AB8775C00EB38DA /* Romeo-and-Juliet2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00130DEB2AB8775C00EB38DA /* Romeo-and-Juliet2.txt */; };
 		0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070924E2AB33ED30064CC7F /* AppDelegate.swift */; };
 		007092582AB33ED40064CC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007092572AB33ED40064CC7F /* Assets.xcassets */; };
 		0070925B2AB33ED40064CC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007092592AB33ED40064CC7F /* LaunchScreen.storyboard */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00130DE92AB875E500EB38DA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		00130DEB2AB8775C00EB38DA /* Romeo-and-Juliet2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Romeo-and-Juliet2.txt"; sourceTree = "<group>"; };
 		0070924B2AB33ED30064CC7F /* Romeo-URL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Romeo-URL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0070924E2AB33ED30064CC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007092572AB33ED40064CC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		0070927F2AB3534A0064CC7F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00130DEB2AB8775C00EB38DA /* Romeo-and-Juliet2.txt */,
 				007092A32AB601470064CC7F /* Romeo-and-Juliet.txt */,
 				007092572AB33ED40064CC7F /* Assets.xcassets */,
 				0070925C2AB33ED40064CC7F /* Info.plist */,
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				007092972AB5E45A0064CC7F /* StoryboardName.swift */,
+				00130DE92AB875E500EB38DA /* String+Extensions.swift */,
 			);
 			path = HelpersAndExtensions;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				0070925B2AB33ED40064CC7F /* LaunchScreen.storyboard in Resources */,
 				007092582AB33ED40064CC7F /* Assets.xcassets in Resources */,
 				0070929A2AB5FE6B0064CC7F /* RomeoViewController.storyboard in Resources */,
+				00130DEC2AB8775C00EB38DA /* Romeo-and-Juliet2.txt in Resources */,
 				007092AA2AB72D690064CC7F /* ITunesSearchViewController.storyboard in Resources */,
 				007092952AB5D96C0064CC7F /* RootViewController.storyboard in Resources */,
 				007092A42AB601470064CC7F /* Romeo-and-Juliet.txt in Resources */,
@@ -434,6 +441,7 @@
 				007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */,
 				007092932AB5D01A0064CC7F /* RootInteractor.swift in Sources */,
 				007092BC2AB765FE0064CC7F /* MusicSearchResponseData.swift in Sources */,
+				00130DEA2AB875E500EB38DA /* String+Extensions.swift in Sources */,
 				007092982AB5E45A0064CC7F /* StoryboardName.swift in Sources */,
 				0070928D2AB3577F0064CC7F /* ModuleAssembler+Root.swift in Sources */,
 				007092A22AB5FEBE0064CC7F /* ModuleAssembler+Romeo.swift in Sources */,

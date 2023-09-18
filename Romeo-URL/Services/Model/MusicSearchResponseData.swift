@@ -20,11 +20,4 @@ struct AlbumData: Decodable {
     let collectionName: String
     let artistId: Int
     let artistName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case collectionId
-        case collectionName
-        case artistId
-        case artistName
-    }
 }
