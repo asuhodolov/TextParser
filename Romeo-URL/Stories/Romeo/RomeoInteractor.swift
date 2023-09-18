@@ -55,7 +55,7 @@ final class RomeoInteractor {
             do {
                 let romeoText = try await textProvider.loadTextResource(
                     name: Constants.romeoFileName,
-                    encoding: .isoLatin1)
+                    encoding: .macOSRoman)
                 let wordsFound = findRepeats(text: romeoText ?? "")
                 let wordsInfo = wordsFound.map { (key, value) in
                     return WordInfo(
@@ -75,11 +75,7 @@ final class RomeoInteractor {
     
     private func findRepeats(text: String) -> [String: Int] {
         var wordsFound = [String: Int]()
-        text.enumerateSubstrings(
-            in: text.startIndex..<text.endIndex,
-            options: .byWords
-        ) { substring, substringRange, enclosingRange, stop in
-            guard let word = substring else { return }
+        text.containedWords().forEach { word in
             if let foundWordsCount = wordsFound[word] {
                 wordsFound[word] = foundWordsCount + 1
             } else {
