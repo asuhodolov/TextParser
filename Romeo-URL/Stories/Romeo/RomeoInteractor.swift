@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 protocol RomeoInteractorInput: AnyObject {
     func viewDidLoad()
@@ -68,20 +69,26 @@ final class RomeoInteractor {
                     self?.presenter?.show(words: wordsInfo)
                 }
             } catch (let error) {
-                print("File loading error: \(error.localizedDescription)")
+                Logger.romeoStoryNamespace.info("File loading error: \(error.localizedDescription)")
             }
         }
     }
     
     private func findRepeats(text: String) -> [String: Int] {
         var wordsFound = [String: Int]()
-        text.containedWords().forEach { word in
+        text.enumerateSubstrings(
+            in: text.startIndex..<text.endIndex,
+            options: .byWords
+        ) { substring, substringRange, enclosingRange, stop in
+            guard let word = substring?.lowercased() else { return }
+            
             if let foundWordsCount = wordsFound[word] {
                 wordsFound[word] = foundWordsCount + 1
             } else {
                 wordsFound[word] = 1
             }
         }
+        
         return wordsFound
     }
 }
