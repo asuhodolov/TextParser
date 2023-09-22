@@ -20,6 +20,7 @@ final class ITunesSearchInteractor {
     let albumsProvider: ArtistAlbumsProviderProtocol
     var albums = [ArtistAlbum]()
     var delayedSearchWorkItem: DispatchWorkItem?
+    var loadAlbumsTask: Task<Void, Error>?
     
     init(
         presenter: ITunesSearchPresenterInput? = nil,
@@ -33,12 +34,15 @@ final class ITunesSearchInteractor {
     
     deinit {
         delayedSearchWorkItem?.cancel()
+        loadAlbumsTask?.cancel()
     }
     
     private func retrieveAlbums(of artistName: String) {
-        Task {
+        loadAlbumsTask?.cancel()
+        loadAlbumsTask = Task {
             do {
                 let albums = try await albumsProvider.retrieveAlbums(of: artistName)
+                try Task.checkCancellation()
                 await MainActor.run { [weak self] in
                     self?.albums = albums
                     self?.presenter?.show(albums: albums)
