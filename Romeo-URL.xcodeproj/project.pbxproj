@@ -41,6 +41,7 @@
 		007092B82AB7603E0064CC7F /* ArtistAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B72AB7603E0064CC7F /* ArtistAlbum.swift */; };
 		007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */; };
 		007092BC2AB765FE0064CC7F /* MusicSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */; };
+		00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		007092B72AB7603E0064CC7F /* ArtistAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbum.swift; sourceTree = "<group>"; };
 		007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchDataRouter.swift; sourceTree = "<group>"; };
 		007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchResponseData.swift; sourceTree = "<group>"; };
+		00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		007092642AB33ED40064CC7F /* Romeo-URLTests */ = {
 			isa = PBXGroup;
 			children = (
+				00CB74A72AC0CDEB00DAED06 /* Interactors */,
 				007092652AB33ED40064CC7F /* Romeo_URLTests.swift */,
 			);
 			path = "Romeo-URLTests";
@@ -251,6 +254,7 @@
 				007092A52AB64BC60064CC7F /* SourceTextProvider.swift */,
 				007092B42AB75FF60064CC7F /* ArtistAlbumsProvider.swift */,
 				007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */,
+				00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */,
 				00130DED2AB8913200EB38DA /* Logger.swift */,
 			);
 			path = Services;
@@ -279,6 +283,29 @@
 				007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00CB74A72AC0CDEB00DAED06 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				00CB74A92AC0CE9900DAED06 /* Romeo */,
+				00CB74A82AC0CDF800DAED06 /* iTunesAPI */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		00CB74A82AC0CDF800DAED06 /* iTunesAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iTunesAPI;
+			sourceTree = "<group>";
+		};
+		00CB74A92AC0CE9900DAED06 /* Romeo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Romeo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +453,7 @@
 				007092822AB354530064CC7F /* AppRouter.swift in Sources */,
 				007092B02AB731800064CC7F /* ModuleAssembler+ITunesSearch.swift in Sources */,
 				007092AE2AB7315C0064CC7F /* ITunesSearchRouter.swift in Sources */,
+				00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */,
 				007092892AB3558F0064CC7F /* Services.swift in Sources */,
 				007092A82AB72D5F0064CC7F /* ITunesSearchViewController.swift in Sources */,
 				0070928B2AB356FF0064CC7F /* ModuleAssembler.swift in Sources */,

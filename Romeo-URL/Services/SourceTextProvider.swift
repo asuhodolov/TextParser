@@ -15,14 +15,14 @@ protocol TextProviding {
     func loadTextResource(
         name: String,
         encoding: String.Encoding
-    ) async throws -> String?
+    ) throws -> String?
 }
 
 class SourceTextProvider: TextProviding {
     func loadTextResource(
         name: String,
         encoding: String.Encoding
-    ) async throws -> String? {
+    ) throws -> String? {
         guard let fileURL = Bundle.main.url(
             forResource: name,
             withExtension: "txt")

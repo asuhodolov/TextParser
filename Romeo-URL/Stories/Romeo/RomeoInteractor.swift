@@ -28,6 +28,7 @@ final class RomeoInteractor {
     weak var router: RomeoRouting?
     
     private let textProvider: TextProviding
+    private let repeatsAnalyzer: RepeatsDiscovering
     private var wordsInfo = [WordInfo]()
     private let sortOptions: [SortOption] = [
         .repeatFrequency,
@@ -41,11 +42,13 @@ final class RomeoInteractor {
     init(
         presenter: RomeoPresenterInput? = nil,
         router: RomeoRouting? = nil,
-        textProvider: TextProviding
+        textProvider: TextProviding,
+        repeatsAnalyzer: RepeatsDiscovering
     ) {
         self.presenter = presenter
         self.router = router
         self.textProvider = textProvider
+        self.repeatsAnalyzer = repeatsAnalyzer
         self.selectedSortOption = sortOptions.first ?? .repeatFrequency
     }
     
@@ -54,19 +57,20 @@ final class RomeoInteractor {
     private func loadRomeoText() {
         Task {
             do {
-                let romeoText = try await textProvider.loadTextResource(
+                let romeoText = try textProvider.loadTextResource(
                     name: Constants.romeoFileName,
                     encoding: .macOSRoman)
-                let wordsFound = findRepeats(text: romeoText ?? "")
-                let wordsInfo = wordsFound.map { (key, value) in
+                let repeatsFound = repeatsAnalyzer.findRepeats(
+                    in: romeoText ?? "",
+                    using: .words)
+                let wordsInfo = repeatsFound.map { (key, value) in
                     return WordInfo(
                         word: key,
                         repeatCount: value)
                 }.sorted(by: selectedSortOption)
                 
                 await MainActor.run { [weak self] in
-                    self?.wordsInfo = wordsInfo
-                    self?.presenter?.show(words: wordsInfo)
+                    self?.displayWords(words: wordsInfo)
                 }
             } catch (let error) {
                 Logger.romeoStoryNamespace.info("File loading error: \(error.localizedDescription)")
@@ -74,22 +78,9 @@ final class RomeoInteractor {
         }
     }
     
-    private func findRepeats(text: String) -> [String: Int] {
-        var wordsFound = [String: Int]()
-        text.enumerateSubstrings(
-            in: text.startIndex..<text.endIndex,
-            options: .byWords
-        ) { substring, substringRange, enclosingRange, stop in
-            guard let word = substring?.lowercased() else { return }
-            
-            if let foundWordsCount = wordsFound[word] {
-                wordsFound[word] = foundWordsCount + 1
-            } else {
-                wordsFound[word] = 1
-            }
-        }
-        
-        return wordsFound
+    private func displayWords(words: [WordInfo]) {
+        wordsInfo = words
+        presenter?.show(words: words)
     }
 }
 
