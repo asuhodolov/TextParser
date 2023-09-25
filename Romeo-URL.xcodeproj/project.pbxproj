@@ -12,7 +12,6 @@
 		0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070924E2AB33ED30064CC7F /* AppDelegate.swift */; };
 		007092582AB33ED40064CC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007092572AB33ED40064CC7F /* Assets.xcassets */; };
 		0070925B2AB33ED40064CC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007092592AB33ED40064CC7F /* LaunchScreen.storyboard */; };
-		007092662AB33ED40064CC7F /* Romeo_URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092652AB33ED40064CC7F /* Romeo_URLTests.swift */; };
 		007092702AB33ED40064CC7F /* Romeo_URLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070926F2AB33ED40064CC7F /* Romeo_URLUITests.swift */; };
 		007092722AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092712AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift */; };
 		007092822AB354530064CC7F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092812AB354530064CC7F /* AppRouter.swift */; };
@@ -41,7 +40,18 @@
 		007092B82AB7603E0064CC7F /* ArtistAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B72AB7603E0064CC7F /* ArtistAlbum.swift */; };
 		007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */; };
 		007092BC2AB765FE0064CC7F /* MusicSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */; };
+		0087E1F32AC1C25400E3EEC8 /* RomeoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */; };
+		0087E1F72AC1C77500E3EEC8 /* SourceTextProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */; };
+		0087E1F92AC1CBF000E3EEC8 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
+		0087E1FA2AC1CCF400E3EEC8 /* RomeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929B2AB5FE850064CC7F /* RomeoViewController.swift */; };
+		0087E1FC2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */; };
+		0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929D2AB5FE960064CC7F /* RomeoRouter.swift */; };
+		0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DED2AB8913200EB38DA /* Logger.swift */; };
+		0087E1FF2AC1D03B00E3EEC8 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */; };
+		0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */; };
+		0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092A52AB64BC60064CC7F /* SourceTextProvider.swift */; };
 		00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
+		00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +80,6 @@
 		0070925A2AB33ED40064CC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0070925C2AB33ED40064CC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		007092612AB33ED40064CC7F /* Romeo-URLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Romeo-URLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		007092652AB33ED40064CC7F /* Romeo_URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLTests.swift; sourceTree = "<group>"; };
 		0070926B2AB33ED40064CC7F /* Romeo-URLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Romeo-URLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0070926F2AB33ED40064CC7F /* Romeo_URLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLUITests.swift; sourceTree = "<group>"; };
 		007092712AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -99,7 +108,13 @@
 		007092B72AB7603E0064CC7F /* ArtistAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbum.swift; sourceTree = "<group>"; };
 		007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchDataRouter.swift; sourceTree = "<group>"; };
 		007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchResponseData.swift; sourceTree = "<group>"; };
+		0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextProviderStub.swift; sourceTree = "<group>"; };
+		0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoPresenterMock.swift; sourceTree = "<group>"; };
+		0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzerTests.swift; sourceTree = "<group>"; };
+		0087E2072AC1EC0900E3EEC8 /* Romeo-URL_Units.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Romeo-URL_Units.xctestplan"; sourceTree = "<group>"; };
+		0087E2092AC1EC5400E3EEC8 /* Romeo-URL_UI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Romeo-URL_UI.xctestplan"; sourceTree = "<group>"; };
 		00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzer.swift; sourceTree = "<group>"; };
+		00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +146,7 @@
 		007092422AB33ED30064CC7F = {
 			isa = PBXGroup;
 			children = (
+				0087E2082AC1EC2C00E3EEC8 /* TestPlans */,
 				0070924D2AB33ED30064CC7F /* Romeo-URL */,
 				007092642AB33ED40064CC7F /* Romeo-URLTests */,
 				0070926E2AB33ED40064CC7F /* Romeo-URLUITests */,
@@ -165,7 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				00CB74A72AC0CDEB00DAED06 /* Interactors */,
-				007092652AB33ED40064CC7F /* Romeo_URLTests.swift */,
+				0087E1F42AC1C61E00E3EEC8 /* Mocks */,
+				0087E2002AC1D19D00E3EEC8 /* Services */,
+				0087E1F52AC1C62500E3EEC8 /* Stubs */,
 			);
 			path = "Romeo-URLTests";
 			sourceTree = "<group>";
@@ -285,6 +303,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0087E1F42AC1C61E00E3EEC8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0087E1F52AC1C62500E3EEC8 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		0087E2002AC1D19D00E3EEC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0087E2082AC1EC2C00E3EEC8 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2072AC1EC0900E3EEC8 /* Romeo-URL_Units.xctestplan */,
+				0087E2092AC1EC5400E3EEC8 /* Romeo-URL_UI.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
 		00CB74A72AC0CDEB00DAED06 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +355,7 @@
 		00CB74A92AC0CE9900DAED06 /* Romeo */ = {
 			isa = PBXGroup;
 			children = (
+				00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */,
 			);
 			path = Romeo;
 			sourceTree = "<group>";
@@ -480,7 +532,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007092662AB33ED40064CC7F /* Romeo_URLTests.swift in Sources */,
+				0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */,
+				0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */,
+				0087E1FF2AC1D03B00E3EEC8 /* Bundle+Extensions.swift in Sources */,
+				0087E1FA2AC1CCF400E3EEC8 /* RomeoViewController.swift in Sources */,
+				0087E1F92AC1CBF000E3EEC8 /* RepeatsAnalyzer.swift in Sources */,
+				0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */,
+				00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */,
+				0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */,
+				0087E1F72AC1C77500E3EEC8 /* SourceTextProviderStub.swift in Sources */,
+				0087E1F32AC1C25400E3EEC8 /* RomeoInteractor.swift in Sources */,
+				0087E1FC2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +763,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P49BY83MS8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -721,7 +783,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P49BY83MS8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "6B66982B-4C5B-4541-B239-259F87851350",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Romeo-URL.xcodeproj",
+        "identifier" : "0070926A2AB33ED40064CC7F",
+        "name" : "Romeo-URLUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

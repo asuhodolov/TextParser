@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "1969C341-E01C-4B06-9068-F21085E9013C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Romeo-URL.xcodeproj",
+          "identifier" : "0070924A2AB33ED30064CC7F",
+          "name" : "Romeo-URL"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Romeo-URL.xcodeproj",
+      "identifier" : "0070924A2AB33ED30064CC7F",
+      "name" : "Romeo-URL"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Romeo-URL.xcodeproj",
+        "identifier" : "007092602AB33ED40064CC7F",
+        "name" : "Romeo-URLTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Romeo-URL.xcodeproj",
+        "identifier" : "0070926A2AB33ED40064CC7F",
+        "name" : "Romeo-URLUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
