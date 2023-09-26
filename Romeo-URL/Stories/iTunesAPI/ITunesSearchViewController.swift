@@ -30,7 +30,10 @@ final class ITunesSearchViewController: UITableViewController {
     }
     
     private func prepareView() {
-        title = "iTunes Albums"
+        title = NSLocalizedString(
+            "itunes.navigation.title",
+            value: "iTunes Albums",
+            comment: "iTunes music search controller navigation bar title")
     }
 }
 

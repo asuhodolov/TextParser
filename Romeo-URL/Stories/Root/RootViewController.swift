@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 protocol RootPresenterInput: AnyObject {}
 
@@ -22,7 +23,10 @@ final class RootViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Romeo & iTunes API"
+        title = NSLocalizedString(
+            "root.navigation.title",
+            value: "Romeo & iTunes API",
+            comment: "Root controller navigation bar title")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

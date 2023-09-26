@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00130DEE2AB8913200EB38DA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DED2AB8913200EB38DA /* Logger.swift */; };
-		00130DF02AB891A700EB38DA /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */; };
 		0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070924E2AB33ED30064CC7F /* AppDelegate.swift */; };
 		007092582AB33ED40064CC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007092572AB33ED40064CC7F /* Assets.xcassets */; };
 		0070925B2AB33ED40064CC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007092592AB33ED40064CC7F /* LaunchScreen.storyboard */; };
@@ -47,7 +46,6 @@
 		0087E1FC2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */; };
 		0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929D2AB5FE960064CC7F /* RomeoRouter.swift */; };
 		0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DED2AB8913200EB38DA /* Logger.swift */; };
-		0087E1FF2AC1D03B00E3EEC8 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */; };
 		0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */; };
 		0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092A52AB64BC60064CC7F /* SourceTextProvider.swift */; };
 		00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
@@ -73,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		00130DED2AB8913200EB38DA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		0070924B2AB33ED30064CC7F /* Romeo-URL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Romeo-URL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0070924E2AB33ED30064CC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007092572AB33ED40064CC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -282,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				007092972AB5E45A0064CC7F /* StoryboardName.swift */,
-				00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */,
 			);
 			path = HelpersAndExtensions;
 			sourceTree = "<group>";
@@ -516,7 +512,6 @@
 				007092A62AB64BC60064CC7F /* SourceTextProvider.swift in Sources */,
 				007092B82AB7603E0064CC7F /* ArtistAlbum.swift in Sources */,
 				0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */,
-				00130DF02AB891A700EB38DA /* Bundle+Extensions.swift in Sources */,
 				0070929C2AB5FE850064CC7F /* RomeoViewController.swift in Sources */,
 				0070928F2AB5CF7C0064CC7F /* RootRouter.swift in Sources */,
 				007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */,
@@ -534,7 +529,6 @@
 			files = (
 				0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */,
 				0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */,
-				0087E1FF2AC1D03B00E3EEC8 /* Bundle+Extensions.swift in Sources */,
 				0087E1FA2AC1CCF400E3EEC8 /* RomeoViewController.swift in Sources */,
 				0087E1F92AC1CBF000E3EEC8 /* RepeatsAnalyzer.swift in Sources */,
 				0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */,

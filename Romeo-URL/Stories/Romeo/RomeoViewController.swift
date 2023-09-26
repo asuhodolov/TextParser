@@ -45,11 +45,17 @@ final class RomeoViewController: UIViewController {
     
     private func prepareView() {
         prepareNavigationBar()
-        sortLabel.text = "Sort by:"
+        sortLabel.text = NSLocalizedString(
+            "romeo.label.sortBy",
+            value: "Sort by:",
+            comment: "Sort section title")
     }
     
     private func prepareNavigationBar() {
-        title = "Romeo"
+        title = NSLocalizedString(
+            "romeo.navigation.title",
+            value: "Romeo",
+            comment: "Romeo controller navigation bar title")
     }
     
     private func prepareSortControls() {
@@ -142,11 +148,20 @@ private extension SortOption {
     var title: String {
         switch self {
         case .repeatFrequency:
-            return "Repeat count"
+            return NSLocalizedString(
+                "romeo.segmentedControl.repeatCount",
+                value: "Repeat count",
+                comment: "Sort segmented control option")
         case .alphabetically:
-            return "a..A"
+            return NSLocalizedString(
+                "romeo.segmentedControl.alphabetically",
+                value: "A..Z",
+                comment: "Sort segmented control option")
         case .wordLength:
-            return "Word length"
+            return NSLocalizedString(
+                "romeo.segmentedControl.wordLength",
+                value: "Word length",
+                comment: "Sort segmented control option")
         }
     }
 }
