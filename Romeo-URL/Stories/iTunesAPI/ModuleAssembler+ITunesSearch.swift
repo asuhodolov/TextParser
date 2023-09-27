@@ -24,7 +24,9 @@ extension ModuleAssembler {
             return UIViewController()
         }
         
-        let interactor = ITunesSearchInteractor(albumsProvider: ArtistAlbumsProvider())
+        let albumsProvider = ArtistAlbumsProvider(webApiManager: WebAPIManager())
+        
+        let interactor = ITunesSearchInteractor(albumsProvider: albumsProvider)
         interactor.presenter = viewController
         
         let router = ITunesSearchRouter(

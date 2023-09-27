@@ -13,13 +13,22 @@ protocol ArtistAlbumsProviderProtocol {
 }
 
 final class ArtistAlbumsProvider: ArtistAlbumsProviderProtocol {
+    let webApiManager: WebAPIManagerProtocol
+    
+    init(webApiManager: WebAPIManagerProtocol) {
+        self.webApiManager = webApiManager
+    }
+    
     public func retrieveAlbums(of artist: String) async throws -> [ArtistAlbum] {
-        let request = AF.request(MusicSearchDataRouter.searchAlbums(artist: artist))
-        let responseValue = try await request
-            .validate(statusCode: 200..<300)
-            .serializingDecodable(MusicInfoResponseData.self)
-            .value
-        return responseValue.albumsData.map {
+        let requestManager = RequestManager(
+            apiManager: webApiManager,
+            parser: MusicAlbumsSearchDataParser())
+        
+        let musicData: MusicInfoResponseData = try await requestManager.perform(
+            MusicSearchRequest.searchAlbums(
+                artist: artist))
+        
+        return musicData.albumsData.map {
             ArtistAlbum(
                 albumName: $0.collectionName,
                 artistName: $0.artistName)
