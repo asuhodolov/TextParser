@@ -11,7 +11,7 @@ protocol RomeoRouting: AnyObject {}
 
 final class RomeoRouter {
     weak var controller: UIViewController?
-    var interactor: RomeoInteractorInput
+    weak var interactor: RomeoInteractorInput?
     
     init(
         controller: UIViewController? = nil,

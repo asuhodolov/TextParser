@@ -26,15 +26,18 @@ extension ModuleAssembler {
         
         let interactor = RootInteractor()
         interactor.presenter = viewController
+        viewController.interactor = interactor
         
         let router = RootRouter(
             controller: viewController,
             interactor: interactor)
-        viewController.router = router
-        viewController.interactor = interactor
-        
         interactor.router = router
         
+        viewController.retainedModuleElements = [
+            interactor,
+            router
+        ]
+                
         return viewController
     }
 }

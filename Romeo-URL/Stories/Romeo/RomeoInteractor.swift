@@ -27,7 +27,7 @@ final class RomeoInteractor {
     weak var presenter: RomeoPresenterInput?
     weak var router: RomeoRouting?
     
-    private let textProvider: TextProviding
+    private let romeoWordsProvider: RomeoWordsProviderProtocol
     private var wordsInfo = [WordInfo]()
     private let sortOptions: [SortOption] = [
         .repeatFrequency,
@@ -41,11 +41,11 @@ final class RomeoInteractor {
     init(
         presenter: RomeoPresenterInput? = nil,
         router: RomeoRouting? = nil,
-        textProvider: TextProviding
+        romeoWordsProvider: RomeoWordsProviderProtocol
     ) {
         self.presenter = presenter
         self.router = router
-        self.textProvider = textProvider
+        self.romeoWordsProvider = romeoWordsProvider
         self.selectedSortOption = sortOptions.first ?? .repeatFrequency
     }
     
@@ -54,42 +54,18 @@ final class RomeoInteractor {
     private func loadRomeoText() {
         Task {
             do {
-                let romeoText = try await textProvider.loadTextResource(
-                    name: Constants.romeoFileName,
-                    encoding: .macOSRoman)
-                let wordsFound = findRepeats(text: romeoText ?? "")
-                let wordsInfo = wordsFound.map { (key, value) in
-                    return WordInfo(
-                        word: key,
-                        repeatCount: value)
-                }.sorted(by: selectedSortOption)
-                
-                await MainActor.run { [weak self] in
-                    self?.wordsInfo = wordsInfo
-                    self?.presenter?.show(words: wordsInfo)
-                }
+                let wordsInfo = try await romeoWordsProvider.loadRomeoSplittedByWords()
+                await processWords(wordsInfo)
             } catch (let error) {
                 Logger.romeoStoryNamespace.info("File loading error: \(error.localizedDescription)")
             }
         }
     }
     
-    private func findRepeats(text: String) -> [String: Int] {
-        var wordsFound = [String: Int]()
-        text.enumerateSubstrings(
-            in: text.startIndex..<text.endIndex,
-            options: .byWords
-        ) { substring, substringRange, enclosingRange, stop in
-            guard let word = substring?.lowercased() else { return }
-            
-            if let foundWordsCount = wordsFound[word] {
-                wordsFound[word] = foundWordsCount + 1
-            } else {
-                wordsFound[word] = 1
-            }
-        }
-        
-        return wordsFound
+    @MainActor
+    private func processWords(_ words: [WordInfo]) {
+        wordsInfo = words
+        presenter?.show(words: words)
     }
 }
 
@@ -98,9 +74,9 @@ final class RomeoInteractor {
 
 extension RomeoInteractor: RomeoInteractorInput {
     func viewDidLoad() {
-        loadRomeoText()
         presenter?.set(sortOptions: sortOptions)
         presenter?.select(sortOption: selectedSortOption)
+        loadRomeoText()
     }
     
     func userDidSelectSortOption(_ sortOption: SortOption) {
@@ -111,23 +87,6 @@ extension RomeoInteractor: RomeoInteractorInput {
         }
         
         selectedSortOption = sortOptions[index]
-        wordsInfo = wordsInfo.sorted(by: selectedSortOption)
-        presenter?.show(words: wordsInfo)
-    }
-}
-
-
-// MARK: - WordInfo Extension
-
-private extension Array<WordInfo> {
-    func sorted(by sortOption: SortOption) -> Self {
-        switch sortOption {
-        case .repeatFrequency:
-            return sorted { $0.repeatCount > $1.repeatCount }
-        case .alphabetically:
-            return sorted { $0.word < $1.word }
-        case .wordLength:
-            return sorted { $0.word.count > $1.word.count }
-        }
+        presenter?.select(sortOption: selectedSortOption)
     }
 }

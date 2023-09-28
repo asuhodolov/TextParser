@@ -24,15 +24,26 @@ extension ModuleAssembler {
             return UIViewController()
         }
         
-        let interactor = RomeoInteractor(textProvider: SourceTextProvider())
-        interactor.presenter = viewController
+        let presenter = RomeoViewPresenter(view: viewController)
+        
+        let wordsProvider = RomeoWordsProvider(
+            textProvider: SourceTextProvider(bundle: .main),
+            repeatsAnalyzer: RepatsAnalyzer())
+        let interactor = RomeoInteractor(
+            presenter: presenter,
+            romeoWordsProvider: wordsProvider)
+        viewController.interactor = interactor
         
         let router = RomeoRouter(
             controller: viewController,
             interactor: interactor)
-        viewController.router = router
-        viewController.interactor = interactor
+        interactor.router = router
         
+        viewController.retainedModuleElements = [
+            router,
+            interactor,
+            presenter
+        ]
         return viewController
     }
 }

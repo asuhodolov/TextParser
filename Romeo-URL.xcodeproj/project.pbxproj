@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00130DEE2AB8913200EB38DA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DED2AB8913200EB38DA /* Logger.swift */; };
-		00130DF02AB891A700EB38DA /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */; };
 		0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070924E2AB33ED30064CC7F /* AppDelegate.swift */; };
 		007092582AB33ED40064CC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007092572AB33ED40064CC7F /* Assets.xcassets */; };
 		0070925B2AB33ED40064CC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007092592AB33ED40064CC7F /* LaunchScreen.storyboard */; };
-		007092662AB33ED40064CC7F /* Romeo_URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092652AB33ED40064CC7F /* Romeo_URLTests.swift */; };
-		007092702AB33ED40064CC7F /* Romeo_URLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070926F2AB33ED40064CC7F /* Romeo_URLUITests.swift */; };
-		007092722AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092712AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift */; };
 		007092822AB354530064CC7F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092812AB354530064CC7F /* AppRouter.swift */; };
 		007092892AB3558F0064CC7F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092882AB3558F0064CC7F /* Services.swift */; };
 		0070928B2AB356FF0064CC7F /* ModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070928A2AB356FF0064CC7F /* ModuleAssembler.swift */; };
@@ -39,8 +35,49 @@
 		007092B32AB75F710064CC7F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 007092B22AB75F710064CC7F /* Alamofire */; };
 		007092B52AB75FF60064CC7F /* ArtistAlbumsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B42AB75FF60064CC7F /* ArtistAlbumsProvider.swift */; };
 		007092B82AB7603E0064CC7F /* ArtistAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B72AB7603E0064CC7F /* ArtistAlbum.swift */; };
-		007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */; };
+		007092BA2AB7608D0064CC7F /* MusicSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B92AB7608D0064CC7F /* MusicSearchRequest.swift */; };
 		007092BC2AB765FE0064CC7F /* MusicSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */; };
+		0087E1F32AC1C25400E3EEC8 /* RomeoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */; };
+		0087E1F72AC1C77500E3EEC8 /* SourceTextProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */; };
+		0087E1F92AC1CBF000E3EEC8 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
+		0087E1FA2AC1CCF400E3EEC8 /* RomeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929B2AB5FE850064CC7F /* RomeoViewController.swift */; };
+		0087E1FC2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */; };
+		0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070929D2AB5FE960064CC7F /* RomeoRouter.swift */; };
+		0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00130DED2AB8913200EB38DA /* Logger.swift */; };
+		0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */; };
+		0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092A52AB64BC60064CC7F /* SourceTextProvider.swift */; };
+		0087E2102AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E20F2AC43E9200E3EEC8 /* RequestProtocol.swift */; };
+		0087E2112AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E20F2AC43E9200E3EEC8 /* RequestProtocol.swift */; };
+		0087E2132AC43FF400E3EEC8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2122AC43FF300E3EEC8 /* NetworkError.swift */; };
+		0087E2142AC43FF400E3EEC8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2122AC43FF300E3EEC8 /* NetworkError.swift */; };
+		0087E2162AC4453900E3EEC8 /* WebAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2152AC4453900E3EEC8 /* WebAPIManager.swift */; };
+		0087E2172AC4453900E3EEC8 /* WebAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2152AC4453900E3EEC8 /* WebAPIManager.swift */; };
+		0087E2192AC4464600E3EEC8 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2182AC4464500E3EEC8 /* RequestManager.swift */; };
+		0087E21A2AC4464600E3EEC8 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2182AC4464500E3EEC8 /* RequestManager.swift */; };
+		0087E21D2AC4612300E3EEC8 /* RomeoWordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E21C2AC4612300E3EEC8 /* RomeoWordsProvider.swift */; };
+		0087E21E2AC4612300E3EEC8 /* RomeoWordsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E21C2AC4612300E3EEC8 /* RomeoWordsProvider.swift */; };
+		0087E2212AC469B900E3EEC8 /* Romeo-and-Juliet-Test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0087E2202AC469B900E3EEC8 /* Romeo-and-Juliet-Test.txt */; };
+		0087E2232AC469FD00E3EEC8 /* SourceTextProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2222AC469FD00E3EEC8 /* SourceTextProviderTest.swift */; };
+		0087E2252AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2242AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift */; };
+		0087E2262AC46FE100E3EEC8 /* ITunesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092A72AB72D5F0064CC7F /* ITunesSearchViewController.swift */; };
+		0087E2272AC46FE400E3EEC8 /* ITunesSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092AB2AB731560064CC7F /* ITunesSearchInteractor.swift */; };
+		0087E2282AC4702400E3EEC8 /* ArtistAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B72AB7603E0064CC7F /* ArtistAlbum.swift */; };
+		0087E22A2AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2292AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift */; };
+		0087E22B2AC4717300E3EEC8 /* ArtistAlbumsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B42AB75FF60064CC7F /* ArtistAlbumsProvider.swift */; };
+		0087E22D2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E22C2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift */; };
+		0087E22E2AC476B400E3EEC8 /* MusicSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092B92AB7608D0064CC7F /* MusicSearchRequest.swift */; };
+		0087E22F2AC476BD00E3EEC8 /* MusicSearchResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */; };
+		0087E2302AC476E900E3EEC8 /* ITunesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092AD2AB7315C0064CC7F /* ITunesSearchRouter.swift */; };
+		0087E2322AC4DAB700E3EEC8 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */; };
+		0087E2342AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2332AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift */; };
+		0087E2362AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */; };
+		0087E2372AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */; };
+		0087E23A2AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */; };
+		0087E23C2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */; };
+		0087E23E2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */; };
+		0087E23F2AC5ABAB00E3EEC8 /* ModuleHolderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */; };
+		00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
+		00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,28 +88,16 @@
 			remoteGlobalIDString = 0070924A2AB33ED30064CC7F;
 			remoteInfo = "Romeo-URL";
 		};
-		0070926C2AB33ED40064CC7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 007092432AB33ED30064CC7F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0070924A2AB33ED30064CC7F;
-			remoteInfo = "Romeo-URL";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00130DED2AB8913200EB38DA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		0070924B2AB33ED30064CC7F /* Romeo-URL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Romeo-URL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0070924E2AB33ED30064CC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007092572AB33ED40064CC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0070925A2AB33ED40064CC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0070925C2AB33ED40064CC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		007092612AB33ED40064CC7F /* Romeo-URLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Romeo-URLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		007092652AB33ED40064CC7F /* Romeo_URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLTests.swift; sourceTree = "<group>"; };
-		0070926B2AB33ED40064CC7F /* Romeo-URLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Romeo-URLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0070926F2AB33ED40064CC7F /* Romeo_URLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLUITests.swift; sourceTree = "<group>"; };
-		007092712AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romeo_URLUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		007092812AB354530064CC7F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		007092882AB3558F0064CC7F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		0070928A2AB356FF0064CC7F /* ModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAssembler.swift; sourceTree = "<group>"; };
@@ -96,8 +121,30 @@
 		007092AF2AB731800064CC7F /* ModuleAssembler+ITunesSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleAssembler+ITunesSearch.swift"; sourceTree = "<group>"; };
 		007092B42AB75FF60064CC7F /* ArtistAlbumsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsProvider.swift; sourceTree = "<group>"; };
 		007092B72AB7603E0064CC7F /* ArtistAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbum.swift; sourceTree = "<group>"; };
-		007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchDataRouter.swift; sourceTree = "<group>"; };
+		007092B92AB7608D0064CC7F /* MusicSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchRequest.swift; sourceTree = "<group>"; };
 		007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchResponseData.swift; sourceTree = "<group>"; };
+		0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextProviderStub.swift; sourceTree = "<group>"; };
+		0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoPresenterMock.swift; sourceTree = "<group>"; };
+		0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzerTests.swift; sourceTree = "<group>"; };
+		0087E2072AC1EC0900E3EEC8 /* Romeo-URL_Units.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Romeo-URL_Units.xctestplan"; sourceTree = "<group>"; };
+		0087E20F2AC43E9200E3EEC8 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		0087E2122AC43FF300E3EEC8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0087E2152AC4453900E3EEC8 /* WebAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIManager.swift; sourceTree = "<group>"; };
+		0087E2182AC4464500E3EEC8 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		0087E21C2AC4612300E3EEC8 /* RomeoWordsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoWordsProvider.swift; sourceTree = "<group>"; };
+		0087E2202AC469B900E3EEC8 /* Romeo-and-Juliet-Test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Romeo-and-Juliet-Test.txt"; sourceTree = "<group>"; };
+		0087E2222AC469FD00E3EEC8 /* SourceTextProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextProviderTest.swift; sourceTree = "<group>"; };
+		0087E2242AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchPresenterMock.swift; sourceTree = "<group>"; };
+		0087E2292AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPIInteractorTests.swift; sourceTree = "<group>"; };
+		0087E22C2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsProviderStub.swift; sourceTree = "<group>"; };
+		0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		0087E2332AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsProviderTests.swift; sourceTree = "<group>"; };
+		0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewPresenter.swift; sourceTree = "<group>"; };
+		0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewPresenterTests.swift; sourceTree = "<group>"; };
+		0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewControllerMock.swift; sourceTree = "<group>"; };
+		0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHolderProtocol.swift; sourceTree = "<group>"; };
+		00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzer.swift; sourceTree = "<group>"; };
+		00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,22 +163,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		007092682AB33ED40064CC7F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		007092422AB33ED30064CC7F = {
 			isa = PBXGroup;
 			children = (
+				0087E2082AC1EC2C00E3EEC8 /* TestPlans */,
 				0070924D2AB33ED30064CC7F /* Romeo-URL */,
 				007092642AB33ED40064CC7F /* Romeo-URLTests */,
-				0070926E2AB33ED40064CC7F /* Romeo-URLUITests */,
 				0070924C2AB33ED30064CC7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,7 +181,6 @@
 			children = (
 				0070924B2AB33ED30064CC7F /* Romeo-URL.app */,
 				007092612AB33ED40064CC7F /* Romeo-URLTests.xctest */,
-				0070926B2AB33ED40064CC7F /* Romeo-URLUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,18 +201,13 @@
 		007092642AB33ED40064CC7F /* Romeo-URLTests */ = {
 			isa = PBXGroup;
 			children = (
-				007092652AB33ED40064CC7F /* Romeo_URLTests.swift */,
+				0087E21F2AC4699200E3EEC8 /* Resources */,
+				00CB74A72AC0CDEB00DAED06 /* Interactors */,
+				0087E1F42AC1C61E00E3EEC8 /* Mocks */,
+				0087E2002AC1D19D00E3EEC8 /* Services */,
+				0087E1F52AC1C62500E3EEC8 /* Stubs */,
 			);
 			path = "Romeo-URLTests";
-			sourceTree = "<group>";
-		};
-		0070926E2AB33ED40064CC7F /* Romeo-URLUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0070926F2AB33ED40064CC7F /* Romeo_URLUITests.swift */,
-				007092712AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift */,
-			);
-			path = "Romeo-URLUITests";
 			sourceTree = "<group>";
 		};
 		0070927E2AB353320064CC7F /* Application */ = {
@@ -200,6 +234,7 @@
 		007092802AB353640064CC7F /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */,
 				007092862AB354EF0064CC7F /* Root */,
 				007092842AB3549B0064CC7F /* iTunesAPI */,
 				007092832AB354940064CC7F /* Romeo */,
@@ -211,8 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				007092A12AB5FEBE0064CC7F /* ModuleAssembler+Romeo.swift */,
-				0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */,
 				0070929D2AB5FE960064CC7F /* RomeoRouter.swift */,
+				0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */,
+				0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */,
 				007092992AB5FE6B0064CC7F /* RomeoViewController.storyboard */,
 				0070929B2AB5FE850064CC7F /* RomeoViewController.swift */,
 			);
@@ -246,11 +282,14 @@
 		007092872AB355070064CC7F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0087E20E2AC43E7700E3EEC8 /* Networking */,
 				007092BD2AB766030064CC7F /* Model */,
 				007092882AB3558F0064CC7F /* Services.swift */,
 				007092A52AB64BC60064CC7F /* SourceTextProvider.swift */,
 				007092B42AB75FF60064CC7F /* ArtistAlbumsProvider.swift */,
-				007092B92AB7608D0064CC7F /* MusicSearchDataRouter.swift */,
+				007092B92AB7608D0064CC7F /* MusicSearchRequest.swift */,
+				00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */,
+				0087E21C2AC4612300E3EEC8 /* RomeoWordsProvider.swift */,
 				00130DED2AB8913200EB38DA /* Logger.swift */,
 			);
 			path = Services;
@@ -260,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				007092972AB5E45A0064CC7F /* StoryboardName.swift */,
-				00130DEF2AB891A700EB38DA /* Bundle+Extensions.swift */,
 			);
 			path = HelpersAndExtensions;
 			sourceTree = "<group>";
@@ -279,6 +317,89 @@
 				007092BB2AB765FE0064CC7F /* MusicSearchResponseData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0087E1F42AC1C61E00E3EEC8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */,
+				0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */,
+				0087E2242AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift */,
+				0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0087E1F52AC1C62500E3EEC8 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				0087E1F62AC1C77500E3EEC8 /* SourceTextProviderStub.swift */,
+				0087E22C2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		0087E2002AC1D19D00E3EEC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2012AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift */,
+				0087E2332AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift */,
+				0087E2222AC469FD00E3EEC8 /* SourceTextProviderTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0087E2082AC1EC2C00E3EEC8 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2072AC1EC0900E3EEC8 /* Romeo-URL_Units.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
+		0087E20E2AC43E7700E3EEC8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0087E20F2AC43E9200E3EEC8 /* RequestProtocol.swift */,
+				0087E2182AC4464500E3EEC8 /* RequestManager.swift */,
+				0087E2122AC43FF300E3EEC8 /* NetworkError.swift */,
+				0087E2152AC4453900E3EEC8 /* WebAPIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0087E21F2AC4699200E3EEC8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2202AC469B900E3EEC8 /* Romeo-and-Juliet-Test.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00CB74A72AC0CDEB00DAED06 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				00CB74A92AC0CE9900DAED06 /* Romeo */,
+				00CB74A82AC0CDF800DAED06 /* iTunesAPI */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		00CB74A82AC0CDF800DAED06 /* iTunesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0087E2292AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift */,
+			);
+			path = iTunesAPI;
+			sourceTree = "<group>";
+		};
+		00CB74A92AC0CE9900DAED06 /* Romeo */ = {
+			isa = PBXGroup;
+			children = (
+				00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */,
+				0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */,
+			);
+			path = Romeo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,24 +443,6 @@
 			productReference = 007092612AB33ED40064CC7F /* Romeo-URLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0070926A2AB33ED40064CC7F /* Romeo-URLUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0070927B2AB33ED40064CC7F /* Build configuration list for PBXNativeTarget "Romeo-URLUITests" */;
-			buildPhases = (
-				007092672AB33ED40064CC7F /* Sources */,
-				007092682AB33ED40064CC7F /* Frameworks */,
-				007092692AB33ED40064CC7F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0070926D2AB33ED40064CC7F /* PBXTargetDependency */,
-			);
-			name = "Romeo-URLUITests";
-			productName = "Romeo-URLUITests";
-			productReference = 0070926B2AB33ED40064CC7F /* Romeo-URLUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -354,10 +457,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					007092602AB33ED40064CC7F = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 0070924A2AB33ED30064CC7F;
-					};
-					0070926A2AB33ED40064CC7F = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 0070924A2AB33ED30064CC7F;
 					};
@@ -381,7 +480,6 @@
 			targets = (
 				0070924A2AB33ED30064CC7F /* Romeo-URL */,
 				007092602AB33ED40064CC7F /* Romeo-URLTests */,
-				0070926A2AB33ED40064CC7F /* Romeo-URLUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -404,13 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		007092692AB33ED40064CC7F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0087E2212AC469B900E3EEC8 /* Romeo-and-Juliet-Test.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +514,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				007092AC2AB731560064CC7F /* ITunesSearchInteractor.swift in Sources */,
+				0087E2162AC4453900E3EEC8 /* WebAPIManager.swift in Sources */,
 				007092B52AB75FF60064CC7F /* ArtistAlbumsProvider.swift in Sources */,
 				007092822AB354530064CC7F /* AppRouter.swift in Sources */,
+				0087E2362AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */,
 				007092B02AB731800064CC7F /* ModuleAssembler+ITunesSearch.swift in Sources */,
+				0087E2102AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */,
 				007092AE2AB7315C0064CC7F /* ITunesSearchRouter.swift in Sources */,
+				00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */,
 				007092892AB3558F0064CC7F /* Services.swift in Sources */,
 				007092A82AB72D5F0064CC7F /* ITunesSearchViewController.swift in Sources */,
 				0070928B2AB356FF0064CC7F /* ModuleAssembler.swift in Sources */,
+				0087E23E2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift in Sources */,
+				0087E2192AC4464600E3EEC8 /* RequestManager.swift in Sources */,
 				0070929E2AB5FE960064CC7F /* RomeoRouter.swift in Sources */,
 				00130DEE2AB8913200EB38DA /* Logger.swift in Sources */,
 				007092912AB5D0090064CC7F /* RootViewController.swift in Sources */,
@@ -436,13 +534,14 @@
 				007092A62AB64BC60064CC7F /* SourceTextProvider.swift in Sources */,
 				007092B82AB7603E0064CC7F /* ArtistAlbum.swift in Sources */,
 				0070924F2AB33ED30064CC7F /* AppDelegate.swift in Sources */,
-				00130DF02AB891A700EB38DA /* Bundle+Extensions.swift in Sources */,
 				0070929C2AB5FE850064CC7F /* RomeoViewController.swift in Sources */,
 				0070928F2AB5CF7C0064CC7F /* RootRouter.swift in Sources */,
-				007092BA2AB7608D0064CC7F /* MusicSearchDataRouter.swift in Sources */,
+				007092BA2AB7608D0064CC7F /* MusicSearchRequest.swift in Sources */,
 				007092932AB5D01A0064CC7F /* RootInteractor.swift in Sources */,
 				007092BC2AB765FE0064CC7F /* MusicSearchResponseData.swift in Sources */,
 				007092982AB5E45A0064CC7F /* StoryboardName.swift in Sources */,
+				0087E2132AC43FF400E3EEC8 /* NetworkError.swift in Sources */,
+				0087E21D2AC4612300E3EEC8 /* RomeoWordsProvider.swift in Sources */,
 				0070928D2AB3577F0064CC7F /* ModuleAssembler+Root.swift in Sources */,
 				007092A22AB5FEBE0064CC7F /* ModuleAssembler+Romeo.swift in Sources */,
 			);
@@ -452,16 +551,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007092662AB33ED40064CC7F /* Romeo_URLTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		007092672AB33ED40064CC7F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				007092702AB33ED40064CC7F /* Romeo_URLUITests.swift in Sources */,
-				007092722AB33ED40064CC7F /* Romeo_URLUITestsLaunchTests.swift in Sources */,
+				0087E2062AC1D59C00E3EEC8 /* SourceTextProvider.swift in Sources */,
+				0087E1FD2AC1CFB000E3EEC8 /* RomeoRouter.swift in Sources */,
+				0087E1FA2AC1CCF400E3EEC8 /* RomeoViewController.swift in Sources */,
+				0087E1F92AC1CBF000E3EEC8 /* RepeatsAnalyzer.swift in Sources */,
+				0087E22D2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift in Sources */,
+				0087E22F2AC476BD00E3EEC8 /* MusicSearchResponseData.swift in Sources */,
+				0087E1FE2AC1D02600E3EEC8 /* Logger.swift in Sources */,
+				0087E2252AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift in Sources */,
+				0087E2272AC46FE400E3EEC8 /* ITunesSearchInteractor.swift in Sources */,
+				00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */,
+				0087E2112AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */,
+				0087E23F2AC5ABAB00E3EEC8 /* ModuleHolderProtocol.swift in Sources */,
+				0087E2372AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */,
+				0087E2262AC46FE100E3EEC8 /* ITunesSearchViewController.swift in Sources */,
+				0087E2322AC4DAB700E3EEC8 /* URLProtocolMock.swift in Sources */,
+				0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */,
+				0087E22B2AC4717300E3EEC8 /* ArtistAlbumsProvider.swift in Sources */,
+				0087E2232AC469FD00E3EEC8 /* SourceTextProviderTest.swift in Sources */,
+				0087E2282AC4702400E3EEC8 /* ArtistAlbum.swift in Sources */,
+				0087E23C2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift in Sources */,
+				0087E2302AC476E900E3EEC8 /* ITunesSearchRouter.swift in Sources */,
+				0087E1F72AC1C77500E3EEC8 /* SourceTextProviderStub.swift in Sources */,
+				0087E2342AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift in Sources */,
+				0087E2172AC4453900E3EEC8 /* WebAPIManager.swift in Sources */,
+				0087E2142AC43FF400E3EEC8 /* NetworkError.swift in Sources */,
+				0087E21A2AC4464600E3EEC8 /* RequestManager.swift in Sources */,
+				0087E23A2AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift in Sources */,
+				0087E22E2AC476B400E3EEC8 /* MusicSearchRequest.swift in Sources */,
+				0087E22A2AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift in Sources */,
+				0087E1F32AC1C25400E3EEC8 /* RomeoInteractor.swift in Sources */,
+				0087E21E2AC4612300E3EEC8 /* RomeoWordsProvider.swift in Sources */,
+				0087E1FC2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,11 +593,6 @@
 			isa = PBXTargetDependency;
 			target = 0070924A2AB33ED30064CC7F /* Romeo-URL */;
 			targetProxy = 007092622AB33ED40064CC7F /* PBXContainerItemProxy */;
-		};
-		0070926D2AB33ED40064CC7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0070924A2AB33ED30064CC7F /* Romeo-URL */;
-			targetProxy = 0070926C2AB33ED40064CC7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,7 +789,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P49BY83MS8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -693,7 +809,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P49BY83MS8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,42 +817,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Romeo-URL.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Romeo-URL";
-			};
-			name = Release;
-		};
-		0070927C2AB33ED40064CC7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P49BY83MS8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Romeo-URL";
-			};
-			name = Debug;
-		};
-		0070927D2AB33ED40064CC7F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P49BY83MS8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.noooo.Romeo-URLUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Romeo-URL";
 			};
 			name = Release;
 		};
@@ -766,15 +846,6 @@
 			buildConfigurations = (
 				007092792AB33ED40064CC7F /* Debug */,
 				0070927A2AB33ED40064CC7F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0070927B2AB33ED40064CC7F /* Build configuration list for PBXNativeTarget "Romeo-URLUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0070927C2AB33ED40064CC7F /* Debug */,
-				0070927D2AB33ED40064CC7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

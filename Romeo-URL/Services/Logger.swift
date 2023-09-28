@@ -9,7 +9,7 @@ import Foundation
 import OSLog
 
 extension Logger {
-    private static let subsystem = Bundle.main.identifier
+    private static let subsystem = Bundle.main.bundleIdentifier ?? "com.romeo-url"
     
     static let romeoStoryNamespace = Logger(
         subsystem: subsystem,

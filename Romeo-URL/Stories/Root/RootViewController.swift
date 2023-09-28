@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 protocol RootPresenterInput: AnyObject {}
 
@@ -14,15 +15,18 @@ enum RootCellIdentifier: String {
     case iTunes = "iTunesApiCellIdentifier"
 }
 
-final class RootViewController: UITableViewController {
+final class RootViewController: UITableViewController, ModuleHolderProtocol {
     static let identifier = "RootViewController"
     
-    var router: RootRouting?
     weak var interactor: RootInteractorInput?
+    var retainedModuleElements = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Romeo & iTunes API"
+        title = NSLocalizedString(
+            "root.navigation.title",
+            value: "Romeo & iTunes API",
+            comment: "Root controller navigation bar title")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

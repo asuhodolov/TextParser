@@ -14,12 +14,17 @@ protocol ITunesSearchInteractorInput: AnyObject {
 }
 
 final class ITunesSearchInteractor {
+    struct Constants {
+        static let searchDelay: Double = 0.5
+    }
+    
     weak var presenter: ITunesSearchPresenterInput?
     weak var router: ITunesSearchRouting?
     
     let albumsProvider: ArtistAlbumsProviderProtocol
     var albums = [ArtistAlbum]()
     var delayedSearchWorkItem: DispatchWorkItem?
+    var loadAlbumsTask: Task<Void, Error>?
     
     init(
         presenter: ITunesSearchPresenterInput? = nil,
@@ -33,20 +38,26 @@ final class ITunesSearchInteractor {
     
     deinit {
         delayedSearchWorkItem?.cancel()
+        loadAlbumsTask?.cancel()
     }
     
     private func retrieveAlbums(of artistName: String) {
-        Task {
+        loadAlbumsTask?.cancel()
+        loadAlbumsTask = Task {
             do {
                 let albums = try await albumsProvider.retrieveAlbums(of: artistName)
-                await MainActor.run { [weak self] in
-                    self?.albums = albums
-                    self?.presenter?.show(albums: albums)
-                }
+                try Task.checkCancellation()
+                await processAlbums(albums)
             } catch (let error) {
                 Logger.iTunesStoryNamespace.info("Error loading albums: \(error.localizedDescription)")
             }
         }
+    }
+    
+    @MainActor
+    private func processAlbums(_ albums: [ArtistAlbum]) {
+        self.albums = albums
+        presenter?.show(albums: albums)
     }
 }
 
@@ -63,7 +74,7 @@ extension ITunesSearchInteractor: ITunesSearchInteractorInput {
              self?.retrieveAlbums(of: artistName)
         }
         DispatchQueue.main.asyncAfter(
-            deadline: .now() + 0.5,
+            deadline: .now() + Self.Constants.searchDelay,
             execute: workItem)
         
         self.delayedSearchWorkItem = workItem
