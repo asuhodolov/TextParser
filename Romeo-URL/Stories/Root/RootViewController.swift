@@ -15,11 +15,11 @@ enum RootCellIdentifier: String {
     case iTunes = "iTunesApiCellIdentifier"
 }
 
-final class RootViewController: UITableViewController {
+final class RootViewController: UITableViewController, ModuleHolderProtocol {
     static let identifier = "RootViewController"
     
-    var router: RootRouting?
     weak var interactor: RootInteractorInput?
+    var retainedModuleElements = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

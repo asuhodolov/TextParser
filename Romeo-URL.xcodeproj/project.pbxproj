@@ -70,6 +70,12 @@
 		0087E2302AC476E900E3EEC8 /* ITunesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007092AD2AB7315C0064CC7F /* ITunesSearchRouter.swift */; };
 		0087E2322AC4DAB700E3EEC8 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */; };
 		0087E2342AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2332AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift */; };
+		0087E2362AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */; };
+		0087E2372AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */; };
+		0087E23A2AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */; };
+		0087E23C2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */; };
+		0087E23E2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */; };
+		0087E23F2AC5ABAB00E3EEC8 /* ModuleHolderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */; };
 		00CB74AB2AC0D24800DAED06 /* RepeatsAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */; };
 		00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */; };
 /* End PBXBuildFile section */
@@ -133,6 +139,10 @@
 		0087E22C2AC471D000E3EEC8 /* ArtistAlbumsProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsProviderStub.swift; sourceTree = "<group>"; };
 		0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		0087E2332AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsProviderTests.swift; sourceTree = "<group>"; };
+		0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewPresenter.swift; sourceTree = "<group>"; };
+		0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewPresenterTests.swift; sourceTree = "<group>"; };
+		0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoViewControllerMock.swift; sourceTree = "<group>"; };
+		0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHolderProtocol.swift; sourceTree = "<group>"; };
 		00CB74AA2AC0D24800DAED06 /* RepeatsAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsAnalyzer.swift; sourceTree = "<group>"; };
 		00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeoInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +234,7 @@
 		007092802AB353640064CC7F /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				0087E23D2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift */,
 				007092862AB354EF0064CC7F /* Root */,
 				007092842AB3549B0064CC7F /* iTunesAPI */,
 				007092832AB354940064CC7F /* Romeo */,
@@ -235,8 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				007092A12AB5FEBE0064CC7F /* ModuleAssembler+Romeo.swift */,
-				0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */,
 				0070929D2AB5FE960064CC7F /* RomeoRouter.swift */,
+				0070929F2AB5FEAB0064CC7F /* RomeoInteractor.swift */,
+				0087E2352AC5959900E3EEC8 /* RomeoViewPresenter.swift */,
 				007092992AB5FE6B0064CC7F /* RomeoViewController.storyboard */,
 				0070929B2AB5FE850064CC7F /* RomeoViewController.swift */,
 			);
@@ -311,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				0087E1FB2AC1CD4D00E3EEC8 /* RomeoPresenterMock.swift */,
+				0087E23B2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift */,
 				0087E2242AC46FBF00E3EEC8 /* ITunesSearchPresenterMock.swift */,
 				0087E2312AC4DAB700E3EEC8 /* URLProtocolMock.swift */,
 			);
@@ -384,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				00CB74AC2AC17E7300DAED06 /* RomeoInteractorTests.swift */,
+				0087E2382AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift */,
 			);
 			path = Romeo;
 			sourceTree = "<group>";
@@ -503,6 +517,7 @@
 				0087E2162AC4453900E3EEC8 /* WebAPIManager.swift in Sources */,
 				007092B52AB75FF60064CC7F /* ArtistAlbumsProvider.swift in Sources */,
 				007092822AB354530064CC7F /* AppRouter.swift in Sources */,
+				0087E2362AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */,
 				007092B02AB731800064CC7F /* ModuleAssembler+ITunesSearch.swift in Sources */,
 				0087E2102AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */,
 				007092AE2AB7315C0064CC7F /* ITunesSearchRouter.swift in Sources */,
@@ -510,6 +525,7 @@
 				007092892AB3558F0064CC7F /* Services.swift in Sources */,
 				007092A82AB72D5F0064CC7F /* ITunesSearchViewController.swift in Sources */,
 				0070928B2AB356FF0064CC7F /* ModuleAssembler.swift in Sources */,
+				0087E23E2AC5A90200E3EEC8 /* ModuleHolderProtocol.swift in Sources */,
 				0087E2192AC4464600E3EEC8 /* RequestManager.swift in Sources */,
 				0070929E2AB5FE960064CC7F /* RomeoRouter.swift in Sources */,
 				00130DEE2AB8913200EB38DA /* Logger.swift in Sources */,
@@ -546,18 +562,22 @@
 				0087E2272AC46FE400E3EEC8 /* ITunesSearchInteractor.swift in Sources */,
 				00CB74AD2AC17E7300DAED06 /* RomeoInteractorTests.swift in Sources */,
 				0087E2112AC43E9200E3EEC8 /* RequestProtocol.swift in Sources */,
+				0087E23F2AC5ABAB00E3EEC8 /* ModuleHolderProtocol.swift in Sources */,
+				0087E2372AC5959900E3EEC8 /* RomeoViewPresenter.swift in Sources */,
 				0087E2262AC46FE100E3EEC8 /* ITunesSearchViewController.swift in Sources */,
 				0087E2322AC4DAB700E3EEC8 /* URLProtocolMock.swift in Sources */,
 				0087E2022AC1D23000E3EEC8 /* RepeatsAnalyzerTests.swift in Sources */,
 				0087E22B2AC4717300E3EEC8 /* ArtistAlbumsProvider.swift in Sources */,
 				0087E2232AC469FD00E3EEC8 /* SourceTextProviderTest.swift in Sources */,
 				0087E2282AC4702400E3EEC8 /* ArtistAlbum.swift in Sources */,
+				0087E23C2AC5A56D00E3EEC8 /* RomeoViewControllerMock.swift in Sources */,
 				0087E2302AC476E900E3EEC8 /* ITunesSearchRouter.swift in Sources */,
 				0087E1F72AC1C77500E3EEC8 /* SourceTextProviderStub.swift in Sources */,
 				0087E2342AC5687500E3EEC8 /* ArtistAlbumsProviderTests.swift in Sources */,
 				0087E2172AC4453900E3EEC8 /* WebAPIManager.swift in Sources */,
 				0087E2142AC43FF400E3EEC8 /* NetworkError.swift in Sources */,
 				0087E21A2AC4464600E3EEC8 /* RequestManager.swift in Sources */,
+				0087E23A2AC5A51E00E3EEC8 /* RomeoViewPresenterTests.swift in Sources */,
 				0087E22E2AC476B400E3EEC8 /* MusicSearchRequest.swift in Sources */,
 				0087E22A2AC470B800E3EEC8 /* ITunesAPIInteractorTests.swift in Sources */,
 				0087E1F32AC1C25400E3EEC8 /* RomeoInteractor.swift in Sources */,

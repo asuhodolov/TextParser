@@ -28,12 +28,17 @@ extension ModuleAssembler {
         
         let interactor = ITunesSearchInteractor(albumsProvider: albumsProvider)
         interactor.presenter = viewController
+        viewController.interactor = interactor
         
         let router = ITunesSearchRouter(
             controller: viewController,
             interactor: interactor)
-        viewController.router = router
-        viewController.interactor = interactor
+        interactor.router = router
+        
+        viewController.retainedModuleElements = [
+            router,
+            interactor
+        ]
         
         return viewController
     }

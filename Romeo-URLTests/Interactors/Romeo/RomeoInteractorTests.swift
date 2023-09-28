@@ -56,23 +56,11 @@ class RomeoInteractorTests: XCTestCase {
     
     func testSortOptionSet() {
         let presenter = RomeoPresenterMock()
-        let wordsLoadingFinishExpectation = XCTestExpectation()
-        presenter.$showWordsIsCalled
-            .sink { called in
-                if called {
-                    wordsLoadingFinishExpectation.fulfill()
-                }
-            }.store(in: &cancellable)
-        
         romeoInteractor.presenter = presenter
-        romeoInteractor.viewDidLoad()
-        
-        wait(for: [wordsLoadingFinishExpectation], timeout: 1)
-        
         romeoInteractor.userDidSelectSortOption(.repeatFrequency)
-        XCTAssert(
-            presenter.wordsToDisplay[0] == WordInfo(word: "a", repeatCount: 3)
-            && presenter.wordsToDisplay[1] == WordInfo(word: "c", repeatCount: 2),
+        XCTAssertEqual(
+            presenter.selectedSortOption,
+            SortOption.repeatFrequency,
             "RomeoInteractor did set wrong sortOption")
     }
 }

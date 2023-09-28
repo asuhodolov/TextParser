@@ -12,13 +12,13 @@ struct WordInfo {
     let repeatCount: Int
 }
 
-protocol RomeoPresenterInput: AnyObject {
+protocol RomeoViewControllerInput {
     func show(words: [WordInfo])
-    func set(sortOptions: [SortOption])
-    func select(sortOption: SortOption)
+    func set(sortSegments: [SortSegmentInfo])
+    func selectSortSegment(at index: Int)
 }
 
-final class RomeoViewController: UIViewController {
+final class RomeoViewController: UIViewController, ModuleHolderProtocol {
     static let identifier = "RomeoViewController"
     static let wordCellIdentifier = "wordCellIdentifier"
     
@@ -26,12 +26,11 @@ final class RomeoViewController: UIViewController {
     @IBOutlet private var sortLabel: UILabel!
     @IBOutlet private var sortSegmentedControl: UISegmentedControl!
     
-    var router: RomeoRouting?
     weak var interactor: RomeoInteractorInput?
+    var retainedModuleElements = [AnyObject]()
     
     private var wordsInfo = [WordInfo]()
-    private var sortOptions: [SortOption] = []
-    private var selectedSortOption: SortOption?
+    private var sortSegments: [SortSegmentInfo] = []
     
 // MARK: View lifecycle
     
@@ -60,12 +59,12 @@ final class RomeoViewController: UIViewController {
     
     private func prepareSortControls() {
         sortSegmentedControl.removeAllSegments()
-        for i in 0..<sortOptions.count {
-            let option = sortOptions[i]
+        for i in 0..<sortSegments.count {
+            let segmentInfo = sortSegments[i]
             let action = UIAction(
-                title: option.title,
+                title: segmentInfo.title,
                 handler: { [weak interactor] _ in
-                    interactor?.userDidSelectSortOption(option)
+                    interactor?.userDidSelectSortOption(segmentInfo.sortOption)
                 }
             )
             sortSegmentedControl.insertSegment(
@@ -74,38 +73,30 @@ final class RomeoViewController: UIViewController {
                 animated: false
             )
         }
-        guard let selectedOption = self.selectedSortOption,
-              let indexOfOption = self.sortOptions.firstIndex(of: selectedOption)
-        else {
-            sortSegmentedControl.selectedSegmentIndex = 0
-            selectedSortOption = sortOptions.first
-            return
-        }
-        sortSegmentedControl.selectedSegmentIndex = indexOfOption
     }
 }
 
 
 // MARK: - RomeoPresenterInput
 
-extension RomeoViewController: RomeoPresenterInput {
+extension RomeoViewController: RomeoViewControllerInput {
     func show(words: [WordInfo]) {
         wordsInfo = words
         tableView.reloadData()
     }
     
-    func set(sortOptions: [SortOption]) {
-        self.sortOptions = sortOptions
+    func set(sortSegments: [SortSegmentInfo]) {
+        self.sortSegments = sortSegments
         prepareSortControls()
+        sortSegmentedControl.selectedSegmentIndex = -1
     }
     
-    func select(sortOption: SortOption) {
-        guard let indexOfOption = self.sortOptions.firstIndex(of: sortOption) else {
-            selectedSortOption = sortOptions.first
+    func selectSortSegment(at index: Int) {
+        guard index >= sortSegmentedControl.numberOfSegments else {
+            sortSegmentedControl.selectedSegmentIndex = -1
             return
         }
-        self.selectedSortOption = sortOption
-        sortSegmentedControl.selectedSegmentIndex = indexOfOption
+        sortSegmentedControl.selectedSegmentIndex = index
     }
 }
 
@@ -140,28 +131,3 @@ extension RomeoViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension RomeoViewController: UITableViewDelegate {}
-
-
-// MARK: - SortOption extension
-
-private extension SortOption {
-    var title: String {
-        switch self {
-        case .repeatFrequency:
-            return NSLocalizedString(
-                "romeo.segmentedControl.repeatCount",
-                value: "Repeat count",
-                comment: "Sort segmented control option")
-        case .alphabetically:
-            return NSLocalizedString(
-                "romeo.segmentedControl.alphabetically",
-                value: "A..Z",
-                comment: "Sort segmented control option")
-        case .wordLength:
-            return NSLocalizedString(
-                "romeo.segmentedControl.wordLength",
-                value: "Word length",
-                comment: "Sort segmented control option")
-        }
-    }
-}

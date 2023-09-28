@@ -65,12 +65,7 @@ final class RomeoInteractor {
     @MainActor
     private func processWords(_ words: [WordInfo]) {
         wordsInfo = words
-        presentWords(words)
-    }
-    
-    private func presentWords(_ words: [WordInfo]) {
-        let sortedWords = words.sorted(by: selectedSortOption)
-        presenter?.show(words: sortedWords)
+        presenter?.show(words: words)
     }
 }
 
@@ -92,22 +87,6 @@ extension RomeoInteractor: RomeoInteractorInput {
         }
         
         selectedSortOption = sortOptions[index]
-        presentWords(wordsInfo)
-    }
-}
-
-
-// MARK: - WordInfo Extension
-
-private extension Array<WordInfo> {
-    func sorted(by sortOption: SortOption) -> Self {
-        switch sortOption {
-        case .repeatFrequency:
-            return sorted { $0.repeatCount > $1.repeatCount }
-        case .alphabetically:
-            return sorted { $0.word < $1.word }
-        case .wordLength:
-            return sorted { $0.word.count > $1.word.count }
-        }
+        presenter?.select(sortOption: selectedSortOption)
     }
 }

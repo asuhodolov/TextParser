@@ -11,12 +11,12 @@ protocol ITunesSearchPresenterInput: AnyObject {
     func show(albums: [ArtistAlbum])
 }
 
-final class ITunesSearchViewController: UITableViewController {
+final class ITunesSearchViewController: UITableViewController, ModuleHolderProtocol {
     static let identifier = "ITunesSearchViewController"
     static let albumCellIdentifier = "albumCellIdentifier"
     
-    var router: ITunesSearchRouting?
     weak var interactor: ITunesSearchInteractorInput?
+    var retainedModuleElements = [AnyObject]()
     
     private var albums: [ArtistAlbum]?
     private var showActivityIndicator = false
