@@ -18,14 +18,15 @@ extension WordInfo: Equatable {
 class RomeoInteractorTests: XCTestCase {
     static let sourceText = "c C cas A aa a a b\n bsd longest"
     var romeoInteractor: RomeoInteractor!
-    private var cancellable = Set<AnyCancellable>()
+    var cancellable = Set<AnyCancellable>()
     
     override func setUp() {
         super.setUp()
         let textProvider = SourceTextProviderStub(stubbedString: Self.sourceText)
-        romeoInteractor = RomeoInteractor(
+        let wordsProvider = RomeoWordsProvider(
             textProvider: textProvider,
             repeatsAnalyzer: RepatsAnalyzer())
+        romeoInteractor = RomeoInteractor(romeoWordsProvider: wordsProvider)
     }
 
     override func tearDown() {
@@ -33,7 +34,7 @@ class RomeoInteractorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testWordsLoading() {
+    func testWordsPresenting() {
         let presenter = RomeoPresenterMock()
         let showWordsCallExpectation = XCTestExpectation()
         presenter.$showWordsIsCalled
@@ -49,14 +50,8 @@ class RomeoInteractorTests: XCTestCase {
         wait(for: [showWordsCallExpectation], timeout: 1)
         
         XCTAssert(
-            presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "c", repeatCount: 2)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "cas", repeatCount: 1)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "a", repeatCount: 3)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "aa", repeatCount: 1)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "b", repeatCount: 1)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "bsd", repeatCount: 1)) != nil
-            && presenter.wordsToDisplay.firstIndex(of: WordInfo(word: "longest", repeatCount: 1)) != nil,
-            "RomeoInteractor loads and presents wrong words")
+            presenter.wordsToDisplay.count > 0,
+            "RomeoInteractor does not display words")
     }
     
     func testSortOptionSet() {

@@ -27,8 +27,7 @@ final class RomeoInteractor {
     weak var presenter: RomeoPresenterInput?
     weak var router: RomeoRouting?
     
-    private let textProvider: TextProviding
-    private let repeatsAnalyzer: RepeatsDiscovering
+    private let romeoWordsProvider: RomeoWordsProviderProtocol
     private var wordsInfo = [WordInfo]()
     private let sortOptions: [SortOption] = [
         .repeatFrequency,
@@ -42,13 +41,11 @@ final class RomeoInteractor {
     init(
         presenter: RomeoPresenterInput? = nil,
         router: RomeoRouting? = nil,
-        textProvider: TextProviding,
-        repeatsAnalyzer: RepeatsDiscovering
+        romeoWordsProvider: RomeoWordsProviderProtocol
     ) {
         self.presenter = presenter
         self.router = router
-        self.textProvider = textProvider
-        self.repeatsAnalyzer = repeatsAnalyzer
+        self.romeoWordsProvider = romeoWordsProvider
         self.selectedSortOption = sortOptions.first ?? .repeatFrequency
     }
     
@@ -57,30 +54,23 @@ final class RomeoInteractor {
     private func loadRomeoText() {
         Task {
             do {
-                let romeoText = try textProvider.loadTextResource(
-                    name: Constants.romeoFileName,
-                    encoding: .macOSRoman)
-                let repeatsFound = repeatsAnalyzer.findRepeats(
-                    in: romeoText ?? "",
-                    using: .words)
-                let wordsInfo = repeatsFound.map { (key, value) in
-                    return WordInfo(
-                        word: key,
-                        repeatCount: value)
-                }.sorted(by: selectedSortOption)
-                
-                await MainActor.run { [weak self] in
-                    self?.displayWords(words: wordsInfo)
-                }
+                let wordsInfo = try await romeoWordsProvider.loadRomeoSplittedByWords()
+                await processWords(wordsInfo)
             } catch (let error) {
                 Logger.romeoStoryNamespace.info("File loading error: \(error.localizedDescription)")
             }
         }
     }
     
-    private func displayWords(words: [WordInfo]) {
+    @MainActor
+    private func processWords(_ words: [WordInfo]) {
         wordsInfo = words
-        presenter?.show(words: words)
+        presentWords(words)
+    }
+    
+    private func presentWords(_ words: [WordInfo]) {
+        let sortedWords = words.sorted(by: selectedSortOption)
+        presenter?.show(words: sortedWords)
     }
 }
 
@@ -89,9 +79,9 @@ final class RomeoInteractor {
 
 extension RomeoInteractor: RomeoInteractorInput {
     func viewDidLoad() {
-        loadRomeoText()
         presenter?.set(sortOptions: sortOptions)
         presenter?.select(sortOption: selectedSortOption)
+        loadRomeoText()
     }
     
     func userDidSelectSortOption(_ sortOption: SortOption) {
@@ -102,8 +92,7 @@ extension RomeoInteractor: RomeoInteractorInput {
         }
         
         selectedSortOption = sortOptions[index]
-        wordsInfo = wordsInfo.sorted(by: selectedSortOption)
-        presenter?.show(words: wordsInfo)
+        presentWords(wordsInfo)
     }
 }
 

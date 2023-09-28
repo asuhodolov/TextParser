@@ -19,11 +19,17 @@ protocol TextProviding {
 }
 
 class SourceTextProvider: TextProviding {
+    let bundle: Bundle
+    
+    init(bundle: Bundle) {
+        self.bundle = bundle
+    }
+    
     func loadTextResource(
         name: String,
         encoding: String.Encoding
     ) throws -> String? {
-        guard let fileURL = Bundle.main.url(
+        guard let fileURL = bundle.url(
             forResource: name,
             withExtension: "txt")
         else {

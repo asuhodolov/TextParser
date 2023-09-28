@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Romeo-URL.xctestplan"
+            reference = "container:TestPlans/Romeo-URL_Units.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
